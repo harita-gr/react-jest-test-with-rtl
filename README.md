@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# How to Test React Apps Using Jest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates unit testing of React applications using Jest and React Testing Library (RTL).
+It covers setup, rendering components, queries, event simulation, snapshot testing, and mocking functions — all explained step by step with examples.
 
-## Available Scripts
+## Introduction
+Testing is an essential part of building reliable React applications.
+- This project will help you:
+- Understand Jest and RTL basics
+- Write your first test cases
+- Run tests in watch mode
+- Perform snapshot testing
+- Mock functions for isolated component testing
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- React
+- JavaScript
+- Jest with RTL
+- Node.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Pre-requisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js and npm are installed on your system
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clone the Repository
 
-### `npm run build`
+```bash
+git clone https://github.com/harita-gr/react-jest-test-with-rtl.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Run the test and verify results
 
-### `npm run eject`
+```bash
+npm run test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation and Setup of Jest into your existing React Project
+If your app was created with Create React App (CRA), Jest and RTL come pre-installed.
+For non-CRA projects, install Jest and RTL manually:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event
+```
+Update your `package.json` script to enable testing:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+"scripts": {
+  "test": "jest"
+}
+```
+Run all test files ending with .test.js using:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm run test
+```
 
-## Learn More
+## 📂 Project Structure
+```
+src/
+  ├── App.jsx
+  ├── App.test.js
+  └── components/
+      ├── Button.jsx
+      └── Button.test.js
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Jest Cheat Sheet
+| Command                                         | Description                                         |
+| ----------------------------------------------- | --------------------------------------------------- |
+| `npm run test`                                  | Run all tests once                                  |
+| `npm run test -- --watch`                       | Run tests in **watch mode**, re-runs on file change |
+| `npm run test -- --coverage`                    | Show code coverage report                           |
+| `npm run test -- src/components/Button.test.js` | Run tests only for a specific file                  |
+| `npm run test -- -t "renders button"`           | Run tests matching a specific test name pattern     |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 📌 Resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Jest Documentation](https://jestjs.io/ )
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[React Testing Library Docs](https://testing-library.com/docs/ )
